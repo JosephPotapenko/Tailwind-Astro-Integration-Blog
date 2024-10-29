@@ -1,6 +1,12 @@
 ---
 const clientName = 'JOE';
 const theCurrentYear = new Date().getFullYear();
+const user = {
+    name : 'Victor E. Eagle',
+    age : 100,
+}
+
+const emojiSet = ['🌪️','⛰️','💧','🔥'];
 ---
 
 <html lang="en">
@@ -10,13 +16,22 @@ const theCurrentYear = new Date().getFullYear();
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>clientName</title>
+		<a href="/">Home</a>
+		<a href="/about">About</a>
 	</head>
 	<body>
 		<h1>A little about me</h1>
-			<a href="/">Home</a>
-			<a href="/about">About</a>
-			<h1>Welcome to {clientName}</h1>
+			<p>Welcome to {clientName}</p>
+			<p>Welcome {user.name}. Happy {user.age}th Birthday</p>
+			<p>{user.name} loves weather. His favorites are:</p>
+
+			<ul>
+				{emojiSet.map((emoji) => (
+					<li>{emoji}</li>
+				))}
+
 			<!-- <img src="" alt="{clientName}"> -->
+		    </ul>
 			<footer>Copyright {theCurrentYear}</footer>
 	</body>
 </html>
