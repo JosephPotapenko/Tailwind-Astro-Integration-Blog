@@ -1,5 +1,6 @@
 ---
-
+const clientName = 'JOE';
+const theCurrentYear = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -8,11 +9,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>JOE: About Me</title>
+		<title>clientName</title>
 	</head>
 	<body>
 		<h1>A little about me</h1>
 			<a href="/">Home</a>
 			<a href="/about">About</a>
+			<h1>Welcome to {clientName}</h1>
+			<!-- <img src="" alt="{clientName}"> -->
+			<footer>Copyright {theCurrentYear}</footer>
 	</body>
 </html>
