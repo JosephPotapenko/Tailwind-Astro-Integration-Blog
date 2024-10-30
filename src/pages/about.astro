@@ -2,11 +2,11 @@
 const clientName = 'JOE';
 const theCurrentYear = new Date().getFullYear();
 const user = {
-    name : 'Victor E. Eagle',
-    age : 100,
+    name : 'Joseph V. Potapenko',
+    age : theCurrentYear - 2002,
 }
 
-const emojiSet = ['🌪️','⛰️','💧','🔥'];
+const emojiSet = ['🎸','💻','🖼️✏️','🍳'];
 ---
 
 <html lang="en">
@@ -22,9 +22,8 @@ const emojiSet = ['🌪️','⛰️','💧','🔥'];
 	<body>
 		<h1>A little about me</h1>
 			<p>Welcome to {clientName}</p>
-			<p>Welcome {user.name}. Happy {user.age}th Birthday</p>
-			<p>{user.name} loves weather. His favorites are:</p>
-
+			<p>This is the temporary websight of {user.name}. He is {user.age} years old.</p>
+			<p>{user.name} favorite hobbies are:</p>
 			<ul>
 				{emojiSet.map((emoji) => (
 					<li>{emoji}</li>
