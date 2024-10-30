@@ -1,10 +1,8 @@
 ---
+import theData from '../data/theData.json';
 const clientName = 'JOE';
 const theCurrentYear = new Date().getFullYear();
-const user = {
-    name : 'Joseph V. Potapenko',
-    age : theCurrentYear - 2002,
-}
+
 
 const emojiSet = ['🎸','💻','🖼️✏️','🍳'];
 ---
@@ -22,8 +20,8 @@ const emojiSet = ['🎸','💻','🖼️✏️','🍳'];
 	<body>
 		<h1>A little about me</h1>
 			<p>Welcome to {clientName}</p>
-			<p>This is the temporary websight of {user.name}. He is {user.age} years old.</p>
-			<p>{user.name} favorite hobbies are:</p>
+			<p>This is the temporary websight of {theData.name}. He is {theData.age} years old.</p>
+			<p>{theData.name} favorite hobbies are:</p>
 			<ul>
 				{emojiSet.map((emoji) => (
 					<li>{emoji}</li>
